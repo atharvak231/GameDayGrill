@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+
+
+<head>
+    <title>Game Day Grill Order Form</title>
+    <link rel="stylesheet" href="order.css">
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bebas+Neue">
+    
+</head>
+
+
+<body onload="scrolled()">
+    <div class="topnav" id="myTopnav">
+        <a href="javascript:void(0);" class="icon" onclick="expand()">
+        <a href="index.html" id="navItem">Home</a>
+        <a href="about.html" id="navItem">About</a>
+        <a href="#a" onclick="scrollToSection('footer')" id="navItem">Contact</a>
+        <a href="order.html" class="active" id="navItem">Order</a>
+        </a>
+    </div>
+
+    <div class="navbuffer"></div>
+
+    <div class="container">
+        <aside>
+            <nav>
+                <ul>
+                    <li><a href="#a" onclick="scrollToSection('appetizers')">Appetizers</a></li>
+                    <br>
+                    <br>
+                    <li><a href="#e" onclick="scrollToSection('entrees')">Entrees</a></li>
+                    <br>
+                    <br>
+                    <li><a href="#s" onclick="scrollToSection('sides')">Sides</a></li>
+                    <br>
+                    <br>
+                    <li><a href="#b" onclick="scrollToSection('billing')">Billing Information</a></li>
+                    <br>
+                    <br>
+                </ul>
+            </nav>
+        </aside>
+        <section>
+            <br>
+            <br>
+            <form>
+                <fieldset>
+                    <legend>Your Online Order at Game Day Grill</legend>
+                    <h3 id="appetizers">Starters</h3>
+                    <div>
+                        <label for="appetizer1">Garlic Bread $2.99</label>
+                        <input type="number" id="appetizer1" name="appetizer1" min="0"
+                            placeholder="Enter Desired Quantity">
+                    </div>
+                    <br>
+                    <div>
+                        <label for="appetizer2">Mozzarella Sticks $3.99</label>
+                        <input type="number" id="appetizer2" name="appetizer2" min="0"
+                            placeholder="Enter Desired Quantity">
+                    </div>
+                    <br>
+                    <div>
+                        <label for="appetizer3">Tortilla Chips With Queso $2.99</label>
+                        <input type="number" id="appetizer3" name="appetizer3" min="0"
+                            placeholder="Enter Desired Quantity">
+                    </div>
+                    <br>
+                    <div>
+                        <label for="appetizer4">Biscuit with Gravy $4.99</label>
+                        <input type="number" id="appetizer4" name="appetizer4" min="0"
+                            placeholder="Enter Desired Quantity">
+                    </div>
+                    <br>
+                    <hr>
+                    <h3 id="entrees"> Entrees </h3>
+                    <div>
+                        <label for="grilledSteak"> Grilled Steak $23.99</label>
+                        <input type="number" id='grilledSteak' name='grilledSteak' min="0"
+                            placeholder="Enter Desired Quantity">
+                    </div>
+                    <br>
+                    <div>
+                        <label for="chickenCeaserSalad">Chicken Ceaser Salad $15.99</label>
+                        <input type='number' id='grilledSteak' name='grilledSteak' min="0"
+                            placeholder="Enter Desired Quantity">
+                    </div>
+                    <br>
+                    <div>
+                        <label for="tomatoSoup"> Tomato Soup $10.99</label>
+                        <input type="number" id="tomatoSoup" name="tomatoSoup" min="0"
+                            placeholder="Enter Desired Quantity">
+                    </div>
+                    <br>
+                    <div>
+                        <label for="frenchOnionSoup"> French Onion Soup $12.99</label>
+                        <input type="number" id="frenchOnionSoup" name="frenchOnionSoup" min="0"
+                            placeholder="Enter Desired Quantity">
+                    </div>
+                    <br>
+                    <div>
+                        <label for="brisket">Gameday Brisket $18.99</label>
+                        <input type="number" id="brisket" name="brisket" min="0" placeholder="Enter Desired Quantity">
+                    </div>
+                    <br>
+                    <hr>
+                    <h3 id="sides"> Sides </h3>
+                    <div>
+                        <label for='chickenFingers'> Chicken Fingers $5.99</label>
+                        <input type="number" id="chickenFingers" name="chickenFingers" min="0"
+                            placeholder="Enter Desired Quantity">
+                    </div>
+                    <br>
+                    <div>
+                        <label for="frenchFries"> French Fries $2.99</label>
+                        <input type="number" id="chickenFingers" name="chickenFingers" min="0"
+                            placeholder="Enter Desired Quantity">
+                    </div>
+                    <br>
+                    <div>
+                        <label for="waffleFries"> Waffle Fries $3.99</label>
+                        <input type="number" id="waffleFries" name="waffleFries" min="0"
+                            placeholder="Enter Desired Quantity">
+                    </div>
+                    <br>
+                    <div>
+                        <label for="OnionRings"> Onion Rings $4.99 </label>
+                        <input type="number" id="OnionRings" name="OnionRings" min="0"
+                            placeholder="Enter Desired Quantity">
+                    </div>
+                    <br>
+                    <div>
+                        <label for="macncheese"> Mac'n Cheese $6.99 </label>
+                        <input type="number" id="macncheese" name="macncheese" min="0"
+                            placeholder="Enter Desired Quantity">
+                    </div>
+                    <br>
+                    <hr>
+                    <h3 id="billing">
+                        Billing Information
+                    </h3>
+                    <div>
+                        <label for="fname">First Name </label>
+                        <input type="text" id="fname" name="fname" placeholder="Enter your first name" required>
+                        <label for="lname"> Last Name </label>
+                        <input type="text" id="lname" name="lname" placeholder="Enter Your Last Name" required>
+                    </div>
+                    <br>
+                    <div class="billinginput">
+                        <label for="number"> Credit/Debit Card Number </label>
+                        <input type="text" id="number" name="number" placeholder="1234 1234 1234 1234" required>
+                    </div>
+                    <div class="billinginput">
+                        <label for="expirationdate"> Expiration Date </label>
+                        <input type="text" id="expirationdate" name="expirationdate" placeholder="MM/YY" required>
+                    </div>
+                    <div class='billinginput'>
+                        <label for="cvv"> CVV Number</label>
+                        <input type="text" id="cvv" name="cvv" placeholder="123" required>
+
+                    </div>
+
+                    <div>
+                        <input type="submit" id="submit" value="Place Order">
+                    </div>
+                </fieldset>
+
+
+
+            </form>
+            <section id="confirmation" style="display: none;">
+                <h3>Your order has been placed!</h3>
+                <p>Thank you for choosing Game Day Grill. Your delicious food is on its way!</p>
+            </section>
+        </section>
+
+        <script>
+            function scrollToSection(sectionId) {
+                const section = document.getElementById(sectionId);
+                if (section) {
+                    section.scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+
+            document.getElementById('submit').addEventListener('click', function (event) {
+                event.preventDefault(); // Prevent the form from submitting
+
+                // Assuming you have a function to validate the form
+                if (validateForm()) {
+                    document.getElementById('confirmation').style.display = 'block';
+                    scrollToSection('confirmation');
+                }
+            });
+
+            function validateForm() {
+                // Get all input elements with the required attribute
+                const requiredInputs = document.querySelectorAll('input[required]');
+
+                // Check if all required inputs have a value
+                for (const input of requiredInputs) {
+                    if (!input.value.trim()) {
+                        alert('Please fill in all required fields.');
+                        return false;
+                    }
+               
+                }
+                 // If all required inputs have a value, return true
+                 return true;
+            }
+        </script>
+        <script src="main.js"></script>
+    </div>
+    
+    <div class="footer" id="footer">
+        <div class="logo"></div>
+        <div class="text"> <table>
+            <tr><h1>Contact<br><br></h1></tr>
+            <tr><th>Address</th> <td>5151 Ohio Dr, Frisco, TX 75035</td></tr>
+            <tr><th>Phone</th> <td>469-875-8571</td></tr>
+        </table></div>
+    </div>
+</body>
+
+</html>

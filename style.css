@@ -1,0 +1,166 @@
+*{
+    margin: 0px;
+}
+
+.landing{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)) , url(images/burgers.jpeg);
+    background-size: cover;
+    background-position: center bottom;
+    height: 85vh;
+    text-align: center;
+}
+
+.landing > .text{
+    position: absolute;
+    top: 22vh;
+    left: 50%;
+    transform: translate(-50%);
+    width: 35vw;
+    color: white;
+    margin: auto;
+}
+.landing > .text > h1{
+    font-family: 'Bebas Neue';
+    font-size: 69px;
+    line-height: 65px;
+    letter-spacing: 1.5px;
+    width: 100%;
+    text-align: center;
+}
+.landing > .text > p{
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+.landingButton{
+    background-image: linear-gradient(to right, rgba(255, 117, 24, 0.8), rgba(255, 117, 24, 1));
+    display: inline-block;
+    color: white;
+    border-radius: 1px;
+    height: 45px;
+    width: 65%;
+    position: absolute;
+    border: none;
+    cursor: pointer;
+    font-family: 'Bebas Neue';
+    font-size: 20px;
+    z-index: 2;
+    transform: translate(-50%);
+}
+
+.threeElement{
+    height: 40vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    padding: 20px;
+    color: white;
+    font-family: 'Bebas Neue';
+    font-size: 30px;
+}
+
+.box{
+    overflow: hidden;
+    position: relative;
+    text-decoration: none;
+    color: white;
+}
+.box > a > img{
+    transition: transform 1.5s, filter 1.5s;
+    filter: brightness(40%);
+    object-fit: scale-down;
+    width: 100%;
+}
+.box > a > img:hover{
+    filter: brightness(90%);
+    transform: scale(1.3);
+}
+.box > .text{
+    z-index: 2;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    pointer-events: none;
+}
+.box > .text > h1{
+    
+    text-decoration: underline solid;
+    text-decoration-color: #FF7518;
+}
+.box > .text > p{
+    font-size: 20px;
+    max-width: 170px;
+}
+
+.bigElement{
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 80vh;
+    position: relative;
+}
+
+.bigElement > .content1{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)) , url(images/restaurant.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.bigElement > .text{
+    position: absolute;
+    top: 15vh;
+    left: 35%;
+    transform: translate(-50%);
+    width: 35vw;
+    color: white;
+    margin: auto;
+    z-index: 2;
+    font-size: 20px;
+}
+.bigElement > .text > h1{
+    font-family: 'Bebas Neue';
+    font-size: 69px;
+    line-height: 65px;
+    letter-spacing: 1.5px;
+    width: 100%;
+    text-decoration: underline solid;
+    text-decoration-color: #FF7518;
+}
+.bigElement > .text > p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.bigElementButton{
+    background-image: linear-gradient(to right, rgba(255, 117, 24, 0.8), rgba(255, 117, 24, 1));
+    display: inline-block;
+    color: white;
+    border-radius: 1px;
+    height: 45px;
+    width: 65%;
+    position: absolute;
+    border: none;
+    cursor: pointer;
+    font-family: 'Bebas Neue';
+    font-size: 20px;
+    z-index: 2;
+}
+
+
+@media screen and (max-width: 624px) {
+    .landing > .text{
+        width: 70vw;
+    }
+
+    .bigElement > .text{
+        width: 70vw;
+        transform: translate(-20%);
+    }
+
+    .threeElement{
+        grid-template-columns: 1fr;
+        height: 120vh;
+    }
+
+    
+}

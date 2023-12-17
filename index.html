@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bebas+Neue">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap">
+
+</head>
+
+<body onload="scrolled()">
+    
+    <div class="topnav" id="myTopnav">
+        <a href="javascript:void(0);" class="icon" onclick="expand()">
+        <a href="index.htmk" class="active" id="navItem">Home</a>
+        <a href="about.html" id="navItem">About</a>
+        <a href="#" onclick="scrollToSection('footer')" id="navItem">Contact</a>
+        <a href="order.html" id="navItem">Order</a>
+        </a>
+    </div>
+
+    <!--<div class="navbuffer"></div>-->
+    <div class="landing">
+        <div class="text">
+            <h1>Game Day Grill</h1>
+            <p><br> Welcome to Game Day Grill, where the thrill of the game meets the sizzle of sensational flavors <br><br></p>
+            <button onclick="window.location.href='order.html';" class = "landingButton">Order Now</button>
+        </div>
+    </div>
+    <div class="threeElement">
+        
+        <div class="box"><div class="text"><h1>Menu</h1><p>Click to download our menu</p></div><a href="images/menu.pdf.pdf"><img src="images/nugget.jpg"></a></div>
+        <div class="box"><div class="text"><h1>About</h1><p>Learn about our culture</p></div> <a href="#about"><img src="images/fans.jpg"></a></div>
+        <div class="box"><div class="text"><h1>Order</h1><p>Fuel your game day with our delivery service</p></div><a href="order.html"><img src="images/healthy.jpg"></a></div>
+    </div>
+    <div class="bigElement">
+        <div class="text">
+            <h1>Game Day Grill</h1>
+            <p><br><br> At Game Day Grill we know that game days are best spent with friends. Dive into a winning lineup of delectable dishes and cheer on your team with your friends!<br><br>
+                Reserve a table and come cheer on your favorite team with your favorite people! We also offer large scale reservations for team building for offices and birthday parties.<br><br></p>
+            <button onclick="window.location.href='order.html';" class = "bigElementButton">Reserve Now</button>
+        </div>
+        <div class="bigElement content1">
+
+        </div>
+    </div>
+
+    <div class="footer" id="footer">
+        <div class="logo"></div>
+        <div class="text"> <table>
+            <tr><h1>Contact<br><br></h1></tr>
+            <tr><th>Address</th> <td>5151 Ohio Dr, Frisco, TX 75035</td></tr>
+            <tr><th>Phone</th> <td>469-875-8571</td></tr>
+        </table></div>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
