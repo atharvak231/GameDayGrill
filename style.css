@@ -95,7 +95,8 @@
 .bigElement{
     padding-left: 20px;
     padding-right: 20px;
-    height: 80vh;
+    min-height: 80vh;
+    max-height: fit-content;
     position: relative;
 }
 
