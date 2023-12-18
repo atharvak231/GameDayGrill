@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+
+
+<head>
+    <title>Game Day Grill Reservation Form</title>
+    <link rel="stylesheet" href="order.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bebas+Neue">
+    <link rel="stylesheet" href="nav.css">
+    
+</head>
+
+
+<body onload="scrolled()"> 
+    <div class="topnav" id="myTopnav">
+        <a href="javascript:void(0);" class="icon" onclick="expand()">
+        <a href="index.html" id="navItem">Home</a>
+        <a href="about.html" id="navItem">About</a>
+        <a href="#" onclick="scrollToSection('footer')" id="navItem">Contact</a>
+        <a href="order.html" class="active" id="navItem">Order</a>
+        </a>
+    </div>
+
+    <div class="navbuffer"></div>
+
+    <div class="container">
+        <aside>
+            <nav>
+                <ul>
+                    <li><a href="#a" onclick="scrollToSection('people')">Number of People</a></li>
+                    <br>
+                    <br>
+                    <li><a href="#e" onclick="scrollToSection('time')">Date and Time</a></li>
+                    <br>
+                    <br>
+                    <li><a href="#s" onclick="scrollToSection('sides')">Additional Information</a></li>
+                    <br>
+                    <br>
+                    <li><a href="#b" onclick="scrollToSection('cinfo')">Contact Information</a></li>
+                    <br>
+                    <br>
+                </ul>
+            </nav>
+        </aside>
+        <section>
+            <br>
+            <br>
+            <form>
+                <fieldset>
+                    <legend>Your Reservation at Game Day Grill</legend>
+                    <h3 id="people">Number of People</h3>
+                    <div>
+                        <label for="adults">Number of Adults</label>
+                        <input type="number" id="adults" name="adults" min="0"
+                            placeholder="Enter Desired Quantity">
+                    </div>
+                    <br>
+                    <div>
+                        <label for="kids">Number of Kids</label>
+                        <input type="number" id="kids" name="kids" min="0"
+                            placeholder="Enter Desired Quantity">
+                    </div>
+                    <br>
+                    <div>
+                        <label for="tables">Number of Tables</label>
+                        <input type="number" id="tables" name="tables" min="0"
+                            placeholder="Enter Desired Quantity">
+                    </div>
+                    <br>
+                    <hr>
+                    <h3 id="time"> Date and Time </h3>
+                    <div>
+                        <label for="date"> Date</label>
+                        <input type="date" id='date' name='date'
+                            required>
+                    </div>
+                    <br>
+                    <div>
+                        <label for="stime">Start Time</label>
+                        <input type='time' id='stime' name='stime'
+                            required>
+                    </div>
+                    <br>
+                    <div>
+                        <label for="etime">End Time</label>
+                        <input type='time' id='etime' name='etime'>
+                    </div>
+                    <br>
+                    <br>
+                    <hr>
+                    <h3 id="sides"> Additional Information </h3>
+                    <div>
+                        <label for='additionalInformation'> Enter any additonal information we should know</label>
+                        <input type="text" id="addInfo" name="addInfo"
+                            placeholder="Enter Additonal Info">
+                    </div>
+                    <br>
+                    <br>
+                    <hr>
+                    <h3 id="cinfo">
+                        Contact Information
+                    </h3>
+                    <div>
+                        <label for="fname">First Name </label>
+                        <input type="text" id="fname" name="fname" placeholder="Enter your first name" required>
+                        <label for="lname"> Last Name </label>
+                        <input type="text" id="lname" name="lname" placeholder="Enter Your Last Name" required>
+                        <label for="pnumber"> Phone Number </label>
+                        <input type="text" id="pnumber" name="pnumber" placeholder="Enter Your Phone Number" required>
+                    </div>
+                    <br>
+
+                    <div>
+                        <input type="submit" id="submit" value="Place Reservation">
+                    </div>
+                </fieldset>
+
+
+
+            </form>
+            <section id="confirmation" style="display: none;">
+                <h3>Your reservation has been placed!</h3>
+                <p>Thank you for choosing Game Day Grill. We can't wait to serve you!</p>
+            </section>
+        </section>
+
+        <script>
+            function scrollToSection(sectionId) {
+                const section = document.getElementById(sectionId);
+                if (section) {
+                    section.scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+
+            document.getElementById('submit').addEventListener('click', function (event) {
+                event.preventDefault(); // Prevent the form from submitting
+
+                // Assuming you have a function to validate the form
+                if (validateForm()) {
+                    document.getElementById('confirmation').style.display = 'block';
+                    scrollToSection('confirmation');
+                }
+            });
+
+            function validateForm() {
+                // Get all input elements with the required attribute
+                const requiredInputs = document.querySelectorAll('input[required]');
+
+                // Check if all required inputs have a value
+                for (const input of requiredInputs) {
+                    if (!input.value.trim()) {
+                        alert('Please fill in all required fields.');
+                        return false;
+                    }
+               
+                }
+                 // If all required inputs have a value, return true
+                 return true;
+            }
+        </script>
+        <script src="main.js"></script>
+    </div>
+    
+    <div class="footer" id="footer">
+        <div class="logo"></div>
+        <div class="text"> <table>
+            <tr><h1>Contact<br><br></h1></tr>
+            <tr><th>Address</th> <td>5151 Ohio Dr, Frisco, TX 75035</td></tr>
+            <tr><th>Phone</th> <td>469-875-8571</td></tr>
+        </table></div>
+    </div>
+</body>
+
+</html>

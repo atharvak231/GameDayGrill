@@ -102,6 +102,26 @@ td{
     vertical-align: top;
 }
 
+.contact > h1{
+    padding-top: 20px;
+    font-family: 'Bebas Neue';
+    font-size: 69px;
+    line-height: 65px;
+    letter-spacing: 1.5px;
+    width: 100%;
+    text-decoration: underline solid;
+    text-decoration-color: #FF7518;
+    text-align: center;
+}
+
+.contact > .footer > .text{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    text-align: left;
+    line-height: 17px;
+}
+
 @media screen and (max-width: 624px) {
     .topnav a:not(:first-child) {
         display: none;
@@ -136,8 +156,10 @@ td{
         color: grey;
     }
     .footer{
-        display: block;
         grid-template-columns: 1fr;
+    }
+    .logo{
+        display: none;
     }
 
 }
