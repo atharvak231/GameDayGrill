@@ -155,6 +155,7 @@
     .bigElement > .text{
         width: 70vw;
         transform: translate(-20%);
+        top: 0px;
     }
 
     .threeElement{
